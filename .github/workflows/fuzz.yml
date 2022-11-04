@@ -1,7 +1,7 @@
 name: Go fuzz test
 on:
-  workflow_dispatch
-
+  push:
+  pull_request:
 jobs:
   fuzz-test:
     name: Fuzz test
@@ -9,5 +9,4 @@ jobs:
     steps:
       - uses: jidicula/go-fuzz-action@v1.1.0
         with:
-          packages: './...'
           fuzz-time: 120s
