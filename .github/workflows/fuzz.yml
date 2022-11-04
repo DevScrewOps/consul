@@ -1,7 +1,7 @@
 name: Go fuzz test
 on:
-  push:
-  pull_request:
+  workflow_dispatch
+
 jobs:
   fuzz-test:
     name: Fuzz test
