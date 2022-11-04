@@ -1,0 +1,13 @@
+name: Go fuzz test
+on:
+  workflow_dispatch
+
+jobs:
+  fuzz-test:
+    name: Fuzz test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jidicula/go-fuzz-action@v1.1.0
+        with:
+          packages: './...'
+          fuzz-time: 120s
